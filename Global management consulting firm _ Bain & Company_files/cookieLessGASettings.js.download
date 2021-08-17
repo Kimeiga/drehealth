@@ -1,0 +1,11 @@
+﻿
+const createGA = "create";
+const storage = "storage";
+const storageValue = "none";
+const clientId = "clientId";
+const set = "set";
+const setValue = "anonymizeIp";
+const send = "send";
+const sendValue = "pageview";
+const userFingerPrintId = "userFingerPrintId";
+const expiredCookieValue = "=; expires=Thu, 01-Jan-1970 00:00:00 GMT; path=/; domain=.";

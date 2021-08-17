@@ -1,0 +1,102 @@
+﻿
+/**
+ * Returns user unique Id when user select an option on GDPR Modal
+ * */
+function calculateUniqueId() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+/**
+ * Set's the cookie in the browser
+ * @param {any} cname
+ * @param {any} cvalue
+ * @param {any} extime
+ * @param {any} isHour
+ *
+ */
+function setCookie(cname, cvalue, extime, isHour) {
+    var d = new Date();
+    if (isHour) {
+        d.setTime(d.getTime() + (extime * 60 * 60 * 1000));
+    }
+    else {
+        d.setTime(d.getTime() + (extime * 24 * 60 * 60 * 1000));
+    }
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+/**
+ * Get the cookie value based on the name passed to function
+ * @param {any} cname
+ */
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+/**
+ * Determine whether user selects All or Strict cookies
+ * @param {any} gdprCookieName
+ * @param {any} isGDPRModalEnabled
+ * @param {any} gdprConsentAllValue
+ */
+function hasAllConsent(gdprCookieName, isGDPRModalEnabled, gdprConsentAllValue) {
+    if (isGDPRModalEnabled.toLowerCase() === "true") {
+        var gdprCookieValue = getCookie(gdprCookieName);
+        if (gdprCookieValue !== gdprConsentAllValue) {
+            return false;
+        }
+    }
+    return true;
+}
+
+/**
+ * Generate unique Finger Print Id to track that user when user opts for cookie less GA
+ * */
+function getUserFingerPrintId() {
+    var fingerPrintId = '';
+    if (sessionStorage.getItem(userFingerPrintId) !== null) {
+        fingerPrintId = sessionStorage.getItem(userFingerPrintId);
+    } else {
+        sessionStorage.setItem(userFingerPrintId, new Fingerprint().get());
+        fingerPrintId = sessionStorage.getItem(userFingerPrintId);
+    }
+    return fingerPrintId;
+}
+
+/**
+ * add cookie base GA
+ * @param {any} googleTagManagerKey
+ */
+function injectCookieBaseGAScript(googleTagManagerKey) {
+    //Adding back GA with GTM
+    if (!isStringEmpty(googleTagManagerKey)) {
+        getGoogleAnalyticsWithGTM(googleTagManagerKey);
+    }
+}
+/**
+ * add cookieless GA
+ * @param {any} gaAnalyticsTrackingId
+ */
+function injectCookielessGAScript(gaAnalyticsTrackingId) {
+    if (!isStringEmpty(gaAnalyticsTrackingId)) {
+        getGoogleAnalyticsWithoutGTM(gaAnalyticsTrackingId);
+    }
+}
+
+
+
