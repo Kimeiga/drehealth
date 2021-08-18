@@ -3589,9 +3589,6 @@ table[width="100%"][style="background-color:#f5f6f8; border-collapse: collapse;"
 .icon-chevron-down {
     transition: color 200ms;
 }
-.icon-chevron-down:before {
-    content: "";
-}
 .icon-chevron-right {
     transition: color 200ms;
 }
