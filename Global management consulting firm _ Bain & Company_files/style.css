@@ -2933,7 +2933,7 @@ ul li {
     list-style-type: none;
     padding-left: 1rem;
 }
-ul li:before {
+ul li:before:not(.glide__slide){
     content: "•";
     font-size: 1.125rem;
     display: inline-block;
