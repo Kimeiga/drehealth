@@ -4,15 +4,46 @@
 
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script> -->
 	<!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css"> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+	<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+	<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
 
+	<style>
+		.glide img {
+			width: 400px;
+			height: 500px;
+			object-fit: cover;
+		}
+	</style>
 
+	<!-- <script type="module">
+		console.log('ha')
+		import Glide, { Controls, Breakpoints } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
+		var glide = new Glide('.glide', {
+			type: 'carousel',
+			perView: 3,
+			focusAt: 'center',
+			breakpoints: {
+				800: {
+					perView: 2
+				},
+				480: {
+					perView: 1
+				}
+			},
+			autoplay: 2000,
+		})
 
-
+		glide.mount({ Controls, Breakpoints })
+	</script> -->
 	<style>
 		.new-icon-chevron-down {
 			color: #fff;
@@ -1537,14 +1568,12 @@
 						your
 						patients.</h2>
 
-					<span class="btn btn--secondary btn--light">Start Here</span>
+					<a href="contact.html"><span class="btn btn--secondary btn--light">Contact Us</span></a>
 
 				</a>
 				<div class="featured-multimedia__image center">
 
 
-					<!-- 
-<img src="./Global management consulting firm _ Bain &amp; Company_files/careers-overview-1950x650.jpg"> -->
 
 					<img
 						src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501550712165-I9YP5O7A3FCCRBTNFBQV/scissors-2537085.jpg?format=2500w">
@@ -1559,7 +1588,7 @@
 					<h3 class="">Our Product Categories</h3>
 				</div>
 				<div>
-					<div class="glide">
+					<!-- <div class="glide">
 						<div id="product-categories" class="glide__track" data-glide-el="track">
 							<ul class="glide__slides">
 								<li class="glide__slide">
@@ -1669,13 +1698,91 @@
 							<button class="glide__bullet" data-glide-dir="=27"></button>
 							<button class="glide__bullet" data-glide-dir="=28"></button>
 						</div>
+					</div> -->
+					<div class="glide">
+						<div class="glide__slide">
+							<img src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501551461729-Y3VYVRC6BCK62EB5O6FB/operation-540598.jpg?format=1000w"
+								alt="Anesthesia">
+						</div>
+						<div class="glide__slide">
+							<img src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501559414303-1UK0CIP1ZB1V7AX8HCI2/nurse-2536963.jpg?format=1500w"
+								alt="Apparel">
+						</div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501551665536-1JVHCZTY1SHSLP3YNN97/hospital-423751.jpg?format=1500w"
+								alt="Hospital Bedding"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501553049341-AAY5IS6P8JY62LYH7SMH/sterilisation-room-2530987.jpg?format=1000w"
+								alt="Sterilization"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501559035304-ZJHSMTH0BXEC2SP4LBH0/cosmetics-1543286.jpg?format=1500w"
+								alt="Cosmetics"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501553480831-2TQJOJM91P3PD7VAN9YJ/wheelchair-749985.jpg?format=1500w"
+								alt="Durable Medical Equipm</div>ent"> </div>
+
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501559175895-6PYV4CO1K8FCM4PQ92SG/dentist-2530990.jpg?format=1500w"
+								alt="Dental"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501553788721-7VTIDKSIVSRADXDW408M/janitor-1357278.jpg?format=1500w"
+								alt="Environmental Services</div>"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501554619590-KUJ8QNPHW3N44KUHDB9G/doctor-960195.jpg?format=1500w"
+								alt="Diagnostic & Exam"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501554812142-RXGKYEU5EG8BTI2YR5LP/foot-994136.jpg?format=1500w"
+								alt="Foot & Ankle Care"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501555402213-I9BNSRSFIQ43NN296LR4/surgery-688380.jpg?format=1500w"
+								alt="Gloves"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501555668287-NSR7ADQTY0VDE06J7YOV/science-1029385.jpg?format=1500w"
+								alt="Laboratory Supplies"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501555800976-PER7DCYBOB24LY28PT81/hospital-1822460.jpg?format=1500w"
+								alt="Nursing & Patient Serv</div>ices"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501555994615-2IXA8UIQAK35RI0SLI9K/vitamin-b-871135.jpg?format=1500w"
+								alt="Patient Nutrition"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501556603515-MCINTRS88CU2I8UKSGOU/appointment-calendar-2295338.jpg?format=1500w"
+								alt="Office Supplies"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501556998143-DOVNWBMOZJ5MHFD34FMC/medicine-91754.jpg?format=1500w"
+								alt="Surgical & OR"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501557280806-93QV72WP4R8CTZPMA0IA/workout-1931107.jpg?format=1500w"
+								alt="Rehabilitation & Thera</div>py"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501557602960-WENA4U44L43LV5I3GF8R/drug-943759.jpg?format=1500w"
+								alt="Pharmacy"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501557847683-YKCSJ571OK2JCDDPDF29/inhalation-mask-1945171.jpg?format=1500w"
+								alt="Respiratory"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501558133495-TM9A11KPWBUTFUXAQ8EV/cosmetics-2238424.jpg?format=1500w"
+								alt="Skincare"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501558320764-A9W8BUM48MDMUUFUUO0A/baby-1866623.jpg?format=1500w"
+								alt="Textiles"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501558590212-BTKIHWNC0WSPHG4W1XMF/hands-770461.jpg?format=1500w"
+								alt="Urology"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501558867795-ODKAXPC6K3X9B32WH1FX/vascular-1049535.jpg?format=1000w"
+								alt="Vascular"></div>
+						<div class="glide__slide"><img
+								src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501551389799-3FHLLJXLGB1ZLPVD5HUU/accident-1238326.jpg?format=1500w"
+								alt="Wound Care"></div>
 					</div>
-
-
-
-
 				</div>
-				<!-- <div class="card__grid column row feed__row">
+
+
+
+
+		</div>
+		<!-- <div class="card__grid column row feed__row">
 					<div class="row small-up-1 medium-up-2 large-up-2">
 
 
@@ -1824,52 +1931,52 @@
 
 					</div>
 				</div> -->
-				<!-- <div class="column row centered">
+		<!-- <div class="column row centered">
 					<a class="btn btn--secondary" href="https://www.bain.com/insights/?filters=types(426,427,428)"
 						data-ctabuttonclick="true">See all insights</a>
 				</div> -->
-			</section>
-			<div class="bain-code-embed  " id="4f9cea07-7e94-4ed2-803b-cf140f70be0d"
-				data-magellan-target="4f9cea07-7e94-4ed2-803b-cf140f70be0d">
+		</section>
+		<div class="bain-code-embed  " id="4f9cea07-7e94-4ed2-803b-cf140f70be0d"
+			data-magellan-target="4f9cea07-7e94-4ed2-803b-cf140f70be0d">
 
-			</div>
-			<script nonce="">
-				var acceptLinks = document.getElementsByClassName('btnAcceptInteractive');
+		</div>
+		<script nonce="">
+			var acceptLinks = document.getElementsByClassName('btnAcceptInteractive');
 
-				var acceptLinkClick = function () {
-					AcceptAllCookies();
-					window.location.reload();
-				};
+			var acceptLinkClick = function () {
+				AcceptAllCookies();
+				window.location.reload();
+			};
 
-				if (acceptLinks != null && acceptLinks.length != 0) {
-					for (var i = 0; i < acceptLinks.length; i++) {
-						acceptLinks[i].addEventListener('click', acceptLinkClick, false);
-					}
+			if (acceptLinks != null && acceptLinks.length != 0) {
+				for (var i = 0; i < acceptLinks.length; i++) {
+					acceptLinks[i].addEventListener('click', acceptLinkClick, false);
 				}
-			</script>
-			<section class="disruptor-side-by-side">
-				<div class="row column disruptor-side-by-side__content">
-					<div class="column">
-						<h2 class="">Cost</h2>
-						<p>With institutional costs on the rise and clinical profits falling rapidly, DRE Health fills
-							the gap
-							between income and expenses with our 110% price match guarantee.</p>
-						<!-- <a href="logincontact-form-page/" class="btn"
+			}
+		</script>
+		<section class="disruptor-side-by-side">
+			<div class="row column disruptor-side-by-side__content">
+				<div class="column">
+					<h2 class="">Cost</h2>
+					<p>With institutional costs on the rise and clinical profits falling rapidly, DRE Health fills
+						the gap
+						between income and expenses with our 110% price match guarantee.</p>
+					<!-- <a href="logincontact-form-page/" class="btn"
 							data-ctabuttonclick="true">LET'S GET TO WORK</a> -->
-					</div>
-					<div class="column">
-						<h2 class="">Product Line</h2>
-
-						<!-- <a href="#" class="btn" data-ctabuttonclick="true">COME FIND OUT</a> -->
-						<p>DRE Health offers a comprehensive line of high quality products to fit your medical needs.
-							From complex,
-							specialized surgical instruments to diverse lines of disposable gloves, we have everything
-							your
-							institution
-							could ever need, and more.</p>
-					</div>
 				</div>
-			</section>
+				<div class="column">
+					<h2 class="">Product Line</h2>
+
+					<!-- <a href="#" class="btn" data-ctabuttonclick="true">COME FIND OUT</a> -->
+					<p>DRE Health offers a comprehensive line of high quality products to fit your medical needs.
+						From complex,
+						specialized surgical instruments to diverse lines of disposable gloves, we have everything
+						your
+						institution
+						could ever need, and more.</p>
+				</div>
+			</div>
+		</section>
 
 		</div>
 	</article>
@@ -1955,7 +2062,7 @@
 							</small></p>
 					</div>
 				</div>
-				
+
 			</div>
 			<div class="column footer__bottom-row">
 				<div class="footer__links">
@@ -2437,24 +2544,21 @@
 
 	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 	<!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-	<script type="module">
-		import Glide, { Controls, Breakpoints } from './node_modules/@glidejs/glide/dist/glide.modular.esm.js'
-		var glide = new Glide('.glide', {
-			type: 'carousel',
-			perView: 3,
-			focusAt: 'center',
-			breakpoints: {
-				800: {
-					perView: 2
-				},
-				480: {
-					perView: 1
-				}
-			},
-			autoplay: 2000,
-		})
-
-		glide.mount({ Controls, Breakpoints })
+	<script>
+		var slider = tns({
+			"container": ".glide",
+			"items": 3,
+			"speed": 300,
+			"autoplay": true,
+			"autoplayHoverPause": true,
+			"autoplayTimeout": 2000,
+			"autoplayText": [
+				"▶",
+				"❚❚"
+			],
+			"swipeAngle": false,
+			"mouseDrag": true,
+		});
 	</script>
 </body>
 
