@@ -16,6 +16,8 @@
 	<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
 
+
+
 	<style>
 		.hero__image {
 			left: 0 !important;
@@ -478,18 +480,17 @@
 								<a href="#" aria-label="Learn More" class="hero__text-content large-5 column"
 									tabindex="-1">
 									<p class="hero__tag" data-slide-nav-title="Health Care">Health Care</p>
-									<h2 class="showDesktopTitle hero__title">Preparing for a New Global Economy</h2>
+									<h2 class="showDesktopTitle hero__title">Redefining the Healthcare Supply Chain</h2>
 
-									<h2 class="showMobileTitle hero__title">Preparing for a New Global Economy</h2>
+									<h2 class="showMobileTitle hero__title">Redefining the Healthcare Supply Chain</h2>
 
-									<span class="hero__cta ">Learn More <i class="fas fa-arrow-right"></i></span>
 								</a>
 								<div class="hero__image center">
 									<div class="hero__overlay"></div>
 
 
 
-									<img src="./Global management consulting firm _ Bain &amp; Company_files/homepage-feature_macro-trends-v6-7_16-9.jpg"
+									<img src="https://images.squarespace-cdn.com/content/v1/597fc9c329687f25a43e2165/1501550753108-IMT7F89ZV7NFUJXE07BN/surgery-1822458.jpg?format=2500w"
 										data-object-fit="">
 
 
@@ -505,19 +506,21 @@
 								<a href="#" class="hero__full-width-link" aria-label="Learn More" tabindex="-1"></a>
 								<a href="#" aria-label="Learn More" class="hero__text-content large-5 column"
 									tabindex="-1">
-									<p class="hero__tag" data-slide-nav-title="Agile">Agile Innovation</p>
-									<h2 class="showDesktopTitle hero__title">How Leading Companies Scale Agile</h2>
+									<p class="hero__tag" data-slide-nav-title="Agile">Supplies</p>
+									<h2 class="showDesktopTitle hero__title">Supplying our clients with a transparent
+										cost structure</h2>
 
-									<h2 class="showMobileTitle hero__title">How Leading Companies Scale Agile</h2>
+									<h2 class="showMobileTitle hero__title">Supplying our clients with a transparent
+										cost structure</h2>
 
-									<span class="hero__cta ">Learn More <i class="fas fa-arrow-right"></i></span>
+									<!-- <span class="hero__cta ">Learn More <i class="fas fa-arrow-right"></i></span> -->
 								</a>
 								<div class="hero__image center">
 									<div class="hero__overlay"></div>
 
 
 
-									<img src="./Global management consulting firm _ Bain &amp; Company_files/homepage-features_agilev11_16-9.jpg"
+									<img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
 										data-object-fit="">
 
 
@@ -525,9 +528,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="slick-slide transition-active slick-current slick-active" data-slick-index="2"
-						aria-hidden="false"
-						style="width: 2048px; position: relative; left: -4096px; top: 0px; z-index: 999; opacity: 1;"
+					<div class="slick-slide transition-active " data-slick-index="2" aria-hidden="false"
+						style="width: 2048px; position: relative; left: -4096px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease-in-out 0s;"
 						role="tabpanel" id="slick-slide32">
 						<div>
 							<div class="hero__slide row column" style="width: 100%; display: inline-block;">
@@ -543,7 +545,7 @@
 										unlimited 12 month
 										warranty</h2>
 
-									<span class="hero__cta ">Learn more <i class="fas fa-arrow-right"></i></span>
+									<!-- <span class="hero__cta ">Learn more <i class="fas fa-arrow-right"></i></span> -->
 								</a>
 								<div class="hero__image center">
 									<div class="hero__overlay"></div>
@@ -2675,6 +2677,37 @@
 		slider.events.on('dragEnd', function () {
 			slider.pause();
 		});
+	</script>
+
+	<script>
+		// slider for hero images
+		let currentSlide = 0;
+
+		let slides = [document.querySelector("#slick-slide30")
+			, document.querySelector("#slick-slide31")
+			, document.querySelector("#slick-slide32")];
+
+		console.log(slides)
+
+		function tick() {
+			let nextSlide = (currentSlide + 1) % 3;
+
+			slides[currentSlide].classList.remove(...["slick-current", "slick-active"]);
+			slides[currentSlide].style.opacity = 0;
+
+			slides[nextSlide].classList.add(...["slick-current", "slick-active"]);
+			slides[nextSlide].style.opacity = 1;
+
+			currentSlide = nextSlide;
+		}
+		// tick();
+		// slides[0].classList.remove(...["slick-current", "slick-active"]);
+		// slides[0].style.opacity = 0;
+
+		slides[0].classList.add(...["slick-current", "slick-active"]);
+		slides[0].style.opacity = 1;
+
+		var intervalID = window.setInterval(tick, 7000);
 	</script>
 </body>
 
