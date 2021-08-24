@@ -61,7 +61,7 @@
 		}
 	</style>
 	<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
 		crossorigin="anonymous" />
 
@@ -446,12 +446,9 @@
 								<a href="#" class="hero__full-width-link" aria-label="Learn more" tabindex="0"></a>
 								<a href="#" aria-label="Learn more" class="hero__text-content large-5 column"
 									tabindex="0">
-									<p class="hero__tag" data-slide-nav-title="About DRE">About DRE</p>
-									<h2 class="showDesktopTitle hero__title">DRE Health Corporation is your partner in
-										healthcare manufacturing</h2>
+									<h2 class="showDesktopTitle hero__title">Client Login</h2>
 
-									<h2 class="showMobileTitle hero__title">DRE Health Corporation is your partner in
-										healthcare manufacturing</h2>
+									<h2 class="showMobileTitle hero__title">Client Login</h2>
 
 								</a>
 								<div class="hero__image center">
@@ -478,41 +475,76 @@
 		</div>
 	</header>
 	<article class="row column">
-		<section class="section overview row" id="overview-section" data-magellan-target="overview-section">
-			<div class="medium-10 large-8 column overview--centered medium-centered" style="margin: 4rem auto">
-				<div id="overview-section-text">
-					<p style="text-align: left;">At DRE Health, we provide clients with the highest quality medical
-						equipment, instruments, and supplies at the lowest
-						prices, guaranteed. Our business was founded on the principles of quality, cost-effectiveness,
-						selection, and unrivaled
-						customer service — and we pride ourselves on our commitment to these principles to this day.
-
+		<div class="col sqs-col-12 span-12">
+			<div class="sqs-block html-block sqs-block-html" data-block-type="2"
+				id="block-yui_3_17_2_1_1533082933527_4086">
+				<div class="sqs-block-content">
+					<h1 style="white-space:pre-wrap;">Client Login</h1>
+					<p class="" style="white-space:pre-wrap;">Please enter your unique 5-digit client code in the box below to be taken to your client portal. New clients, please <a href="/contact-us">contact us</a> to get started.
 					</p>
-					<p style="text-align: left;">
-						DRE Health is a manufacturer, wholesaler, distributor, and retailer. We are challenging the
-						conventional supply chain by
-						providing an unorthodox ability for our clients to purchase products directly from us.
-					</p>
-					<p style="text-align: left;">
-						Through our relationships and vast networks, we are also able to offer products manufactured by
-						other large name brands,
-						particularly in Laboratory & Diagnostic equipment.
-					</p>
-					<p style="text-align: left;">
-						We operate manufacturing facilities in the United States, Germany, China, Pakistan, and more.
-						Our DRE name brand
-						instruments, equipment, and supplies are of the highest grade in precision manufacturing. All of
-						our employees are
-						committed to providing quick responses and consistent, high quality work. With a focus on
-						personalized service and a
-						100% customer satisfaction guarantee, what are you waiting for? Contact us today.
-					</p>
-
-					<button class="btn">Contact us</button>
 				</div>
 			</div>
-		</section>
+			<div class="sqs-block code-block sqs-block-code" data-block-type="23"
+				id="block-yui_3_17_2_1_1533082695254_3817">
+				<div class="sqs-block-content">
+					<div id="submitCodeWrapper">
+						<input id="event-code-input" type="text" maxlength="5" class="box" autofocus="">
+						<input id="event-code-submit" class="btn" type="submit" value="Submit" disabled="disabled">
+						<div id="feedback"></div>
+					</div>
+					<script>
+						var eventCode = document.getElementById("event-code-input");
+						var codeSubmit = document.getElementById("event-code-submit");
 
+						eventCode.addEventListener("keyup", function () {
+							if (eventCode.value.length < 5) {
+								feedback.style.color = "red";
+								feedback.textContent = 'Code is not long enough yet...';
+								codeSubmit.disabled = true;
+							}
+							else if (eventCode.value.length = 5) {
+								feedback.style.color = "green";
+								feedback.textContent = 'Code is correct length';
+								codeSubmit.disabled = false;
+							}
+						});
+						codeSubmit.addEventListener("click", function () {
+							location.href = '/' + eventCode.value; return false;
+						});
+					</script>
+					<style>
+						.myButton {
+							height: 53px;
+							margin-left: 10px;
+							width: 145px;
+							padding: 10px;
+							background-color: #71eeb8;
+							color: #fff;
+							border-radius: 4px;
+							border: 0;
+							letter-spacing: 1px;
+							color: #fff;
+						}
+
+						#event-code-input {
+							height: 48px;
+							font-size: 20px;
+							padding-left: 10px;
+						}
+
+						#feedback {
+							margin-top: 10px;
+							color: red;
+						}
+					</style>
+				</div>
+			</div>
+			<div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-bd530b460db0e071fed1">
+				<div class="sqs-block-content">
+					<p class="" style="white-space:pre-wrap;"> </p>
+				</div>
+			</div>
+		</div>
 	</article>
 
 
@@ -969,125 +1001,125 @@
 	<!-- <script nonce="">
 
 
-		(function ($) {
-			updateCookieForLoggedInUser();
-			var cookieValue = getCookie('cookie_consent');
-			if (cookieValue === 'Strict') {
-				deleteAllCookies();
-			}
-		})(jQuery);
+(function ($) {
+updateCookieForLoggedInUser();
+var cookieValue = getCookie('cookie_consent');
+if (cookieValue === 'Strict') {
+deleteAllCookies();
+}
+})(jQuery);
 
-		function ModalShowHide() {
-			var cookie = getCookie('cookie_consent');
-			if (cookie == undefined || cookie == "") {
-				deleteAllCookies();
-				window.displayCookieModal();
-			}
-		}
+function ModalShowHide() {
+var cookie = getCookie('cookie_consent');
+if (cookie == undefined || cookie == "") {
+deleteAllCookies();
+window.displayCookieModal();
+}
+}
 
-		function AcceptCookieConsent() {
-			AcceptAllCookies();
-			var bainInteractives = document.getElementsByClassName('bainInteractive');
-			if (bainInteractives != null && bainInteractives.length != 0) {
-				window.location.reload();
-			}
-		}
-		function AcceptAllCookies() {
-			setCookies('All');
-			//adding cookie base GA
-			injectCookieBaseGAScript("GTM-T4RLV4B");
-			getDemandBaseResults(true, true);
-			removeMarketoOptOutParamFromSubscribeLink();
-		}
-		function AcceptStrictOnlyCookie() {
-			setCookies('Strict');
-			injectCookielessGAScript("UA-7229296-1");
-		}
-		function setCookies(cookieValue) {
-			window.hideCookieModal();
-			var uid = getCookie('cookie_consent' + '_id');
-			if (isStringEmpty(uid)) {
-				uid = calculateUniqueId();
-			}
-			setConsentCookies(cookieValue, uid);
-			saveConsent(cookieValue, uid);
-		}
-		function setConsentCookies(value, id) {
-			if (value != 'All') {
-				setCookie('cookie_consent', value, 12, true);
-				setCookie('cookie_consent' + '_id', id, 12, true);
-			}
-			else {
-				setCookie('cookie_consent', value, 730, false);
-				setCookie('cookie_consent' + '_id', id, 730, false);
-			}
-		}
+function AcceptCookieConsent() {
+AcceptAllCookies();
+var bainInteractives = document.getElementsByClassName('bainInteractive');
+if (bainInteractives != null && bainInteractives.length != 0) {
+window.location.reload();
+}
+}
+function AcceptAllCookies() {
+setCookies('All');
+//adding cookie base GA
+injectCookieBaseGAScript("GTM-T4RLV4B");
+getDemandBaseResults(true, true);
+removeMarketoOptOutParamFromSubscribeLink();
+}
+function AcceptStrictOnlyCookie() {
+setCookies('Strict');
+injectCookielessGAScript("UA-7229296-1");
+}
+function setCookies(cookieValue) {
+window.hideCookieModal();
+var uid = getCookie('cookie_consent' + '_id');
+if (isStringEmpty(uid)) {
+uid = calculateUniqueId();
+}
+setConsentCookies(cookieValue, uid);
+saveConsent(cookieValue, uid);
+}
+function setConsentCookies(value, id) {
+if (value != 'All') {
+setCookie('cookie_consent', value, 12, true);
+setCookie('cookie_consent' + '_id', id, 12, true);
+}
+else {
+setCookie('cookie_consent', value, 730, false);
+setCookie('cookie_consent' + '_id', id, 730, false);
+}
+}
 
-		function saveConsent(consent, uid) {
-			if ((consent === 'All') || (consent === 'Strict')) {
-				$.ajax({
-					type: "post",
-					url: '/api/cookieConsent/insertUserCookieConsentSelection',
-					dataType: 'json',
-					data: { userId: uid, userSelection: consent, __RequestVerificationToken: "FMuM86JYLPJ0w_f3VsiLpsH1yco41p4rxLOR20MnJmHrd4nednAmItHgpQDI9FXRVahcD9-rkHGXfdiZP7LwVjt1K5pe_hi2JCHhEOBalF41" },
-					success: function (result, status, xhr) {
-						if (xhr.status == 200) {
-						}
-					},
-					error: function () {
-					}
-				});
-			}
-		}
+function saveConsent(consent, uid) {
+if ((consent === 'All') || (consent === 'Strict')) {
+$.ajax({
+type: "post",
+url: '/api/cookieConsent/insertUserCookieConsentSelection',
+dataType: 'json',
+data: { userId: uid, userSelection: consent, __RequestVerificationToken: "FMuM86JYLPJ0w_f3VsiLpsH1yco41p4rxLOR20MnJmHrd4nednAmItHgpQDI9FXRVahcD9-rkHGXfdiZP7LwVjt1K5pe_hi2JCHhEOBalF41" },
+success: function (result, status, xhr) {
+if (xhr.status == 200) {
+}
+},
+error: function () {
+}
+});
+}
+}
 
-		function updateCookieForLoggedInUser() {
-			var cookieValue = getCookie('cookie_consent');
-			if ('False'.toLowerCase() === 'true' && (cookieValue === 'Strict' || isStringEmpty(cookieValue))) {
-				AcceptAllCookies();
-			}
-		}
-		function deleteAllCookies() {
-			var cookies = document.cookie.split("; ");
-			var url = window.location.hostname.split('.');
-			var domain = new Array(2);
-			domain[0] = url.slice(-2).join('.');
-			domain[1] = url.slice(-3).join('.');
-			for (var j = 0; j < domain.length; j++) {
-				for (var i = 0; i < cookies.length; i++) {
-					var cookie = cookies[i];
-					var eqPos = cookie.indexOf("=");
-					var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-					document.cookie = name + expiredCookieValue + domain[j];
-				}
-			}
-		}
-		function removeMarketoOptOutParamFromSubscribeLink() {
-			$('.go-bain-com-link').each(function () {
-				var oldUrl = $(this).attr("href"); // Get current url
-				var newUrl = oldUrl.replace("&marketo_opt_out=true", "").replace("?marketo_opt_out=true", "");
-				$(this).attr("href", newUrl); // Set herf value
-			});
-		}
-	</script> -->
+function updateCookieForLoggedInUser() {
+var cookieValue = getCookie('cookie_consent');
+if ('False'.toLowerCase() === 'true' && (cookieValue === 'Strict' || isStringEmpty(cookieValue))) {
+AcceptAllCookies();
+}
+}
+function deleteAllCookies() {
+var cookies = document.cookie.split("; ");
+var url = window.location.hostname.split('.');
+var domain = new Array(2);
+domain[0] = url.slice(-2).join('.');
+domain[1] = url.slice(-3).join('.');
+for (var j = 0; j < domain.length; j++) {
+for (var i = 0; i < cookies.length; i++) {
+var cookie = cookies[i];
+var eqPos = cookie.indexOf("=");
+var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+document.cookie = name + expiredCookieValue + domain[j];
+}
+}
+}
+function removeMarketoOptOutParamFromSubscribeLink() {
+$('.go-bain-com-link').each(function () {
+var oldUrl = $(this).attr("href"); // Get current url
+var newUrl = oldUrl.replace("&marketo_opt_out=true", "").replace("?marketo_opt_out=true", "");
+$(this).attr("href", newUrl); // Set herf value
+});
+}
+</script> -->
 	<!-- <script nonce="">
 
-		$(document).ready(function () {
-			ModalShowHide();
-		});
+$(document).ready(function () {
+ModalShowHide();
+});
 
-		document.getElementById('CookieModalAcceptAllLink').onclick = function () {
-			AcceptAllCookies();
-		}
-		document.getElementById('CookieModalStrictOnlyLink').onclick = function () {
-			AcceptStrictOnlyCookie();
-		}
+document.getElementById('CookieModalAcceptAllLink').onclick = function () {
+AcceptAllCookies();
+}
+document.getElementById('CookieModalStrictOnlyLink').onclick = function () {
+AcceptStrictOnlyCookie();
+}
 
-	</script> -->
+</script> -->
 
 
 	<!-- <script nonce="">
-		sessionStorage.setItem("UserBookmarkSync", "false");
-	</script> -->
+sessionStorage.setItem("UserBookmarkSync", "false");
+</script> -->
 
 
 	<div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div>
